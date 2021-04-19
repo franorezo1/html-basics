@@ -7,84 +7,97 @@
     <title>HTML basics</title>
   </head>
   <body>
-    <b>podebljano</b>
-    <br />
-    <em>kurziv</em>
-    <br />
-    <span>Prvi dio</span>
-    <p>ovo je paragraf</p>
+    <!--
+      header
+      main
+      footer
 
-    <div>
-      <span>Prvi dio</span>
-    </div>
+      section
+      article
+      aside
+      nav
+    -->
 
-    <div>
-      <b>podebljano</b>
-    </div>
+    <header>
+      <!-- Logo, navigacija, ikone ... -->
+      <h2>Moja stranica</h2>
+      <!-- Linkovi -->
+      <!-- 1.način - bullet lista -->
+      <!-- <ul>
+        <li>
+          <a href="#">Početna</a>
+        </li>
+        <li>
+          <a href="#">Proizvodi</a>
+        </li>
+        <li>
+          <a href="#">Kontakt</a>
+        </li>
+      </ul> -->
 
-    <div>
-      <em>kurziv</em>
-    </div>
-
-    <hr />
-    <!-- Liste -->
-    <!-- <ul> za bullet liste -->
-    <ol>
-      <li>Frano</li>
-      <li>Marin</li>
-      <li>Karla</li>
-      <li>Magdalena</li>
-      <li>Petra</li>
-      <li>Nora</li>
-    </ol>
-
-    <!-- Tablice -->
-    <table>
-      <thead>
-        <tr>
-          <th>Ime</th>
-          <th>Prezime</th>
-          <th>Godište</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Frano</td>
-          <td>Rezo</td>
-          <td>1994</td>
-        </tr>
-        <tr>
-          <td>Marin</td>
-          <td>Zglav</td>
-        </tr>
-      </tbody>
-    </table>
+      <!-- 2.način - <nav> element -->
+      <nav>
+        <a href="#">Početna</a>
+        <a href="#">Proizvodi</a>
+        <a href="#">Kontakt</a>
+      </nav>
+    </header>
 
     <hr />
+    <main>
+      <!-- Dobrodošli sekcija -->
+      <section>
+        <h1>Dobrodošli!</h1>
+      </section>
 
-    <!-- Slike -->
-    <img src="./images/buket-ruza.jpg" alt="Moja slika" width="200" />
+      <!-- Proizvodi -->
+      <section>
+        <article>
+          <h3>Lavanda</h3>
+          <img src="./images/lavanda.jpeg" alt="Lavanda" width="100" />
+          <p>Lorem ipsum dolor sit amet.</p>
+          <b>20kn</b>
+        </article>
 
-    <!-- Forme i inputi -->
+        <article>
+          <h3>Ruža</h3>
+          <img src="./images/ruza.png" alt="Ruža" width="100" />
+          <p>Lorem ipsum dolor sit amet.</p>
+          <b>20kn</b>
+        </article>
 
-    <form>
-      <div>
-        <label for="marin">Email:</label>
-        <input type="email" id="marin" required />
-      </div>
+        <article>
+          <h3>Tulipan</h3>
+          <img src="./images/tulipan.png" alt="Tulipan" width="100" />
+          <p>Lorem ipsum dolor sit amet.</p>
+          <b>20kn</b>
+        </article>
 
-      <div>
-        <label for="passwd">Lozinka:</label>
-        <input type="password" id="passwd" />
-      </div>
+        <article>
+          <h3>Krizantema</h3>
+          <img src="./images/krizantema.jpeg" alt="Krizantema" width="100" />
+          <p>Lorem ipsum dolor sit amet.</p>
+          <b>20kn</b>
+        </article>
+      </section>
 
-      <div>
-        <label for="check">Checkbox:</label>
-        <input type="checkbox" id="check" />
-      </div>
+      <!-- Kontakt -->
+      <section>
+        <!-- Ovdje dodati formu -->
+        <input type="text" />
+        <textarea name="poruka" id="message"></textarea>
+      </section>
 
-      <button>Spremi</button>
-    </form>
-    <button>Izvan</button>
+      <!-- Aside -->
+      <aside>
+        <span>Meni sa strane</span>
+      </aside>
+    </main>
+    <hr />
+
+    <footer>
+      <i>&copy; Sva prava pridržana.</i>
+      <b>Frano Rezo</b>
+    </footer>
   </body>
 </html>
