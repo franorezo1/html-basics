@@ -10,6 +10,9 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #f28989;
   color: white;
   padding: 10px 20px;
@@ -22,7 +25,6 @@ h2 {
 
 nav {
   display: inline-block;
-  margin-left: 200px;
 }
 
 /* 1. način - selektor za elemente */
@@ -33,4 +35,23 @@ header nav a {
 /* 2. način - CSS klasa */
 .link {
   color: white;
+}
+
+.flower-list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.flower-list__item {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid green;
+  border-radius: 10px;
+}
+
+.text-center {
+  text-align: center;
 }
