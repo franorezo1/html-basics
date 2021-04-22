@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  font-size: 16px;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #f28989;
+  color: white;
+  padding: 10px 20px;
+}
+
+h2 {
+  display: inline-block;
+  margin: 0;
+}
+
+nav {
+  display: inline-block;
+  margin-left: 200px;
+}
+
+/* 1. način - selektor za elemente */
+header nav a {
+  color: blue;
+}
+
+/* 2. način - CSS klasa */
+.link {
+  color: white;
+}
