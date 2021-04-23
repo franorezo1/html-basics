@@ -16,6 +16,10 @@ header {
   background-color: #f28989;
   color: white;
   padding: 10px 20px;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 h2 {
@@ -28,13 +32,29 @@ nav {
 }
 
 /* 1. način - selektor za elemente */
-header nav a {
+/* header nav a {
   color: blue;
-}
+} */
 
 /* 2. način - CSS klasa */
 .link {
   color: white;
+  transition: color 0.3s ease; /* CSS3 svojstvo */
+}
+/* :hover - pseudo-klasa */
+.link:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+/* ::after - pseudo-element */
+h1::after {
+  content: ""; /* Obavezno svojstvo kod "::after" i "::before" */
+  display: block;
+  height: 2px;
+  width: 100px;
+  margin: 4px auto 0;
+  background-color: #f28989;
 }
 
 .flower-list {
@@ -43,13 +63,23 @@ header nav a {
   margin-bottom: 100px;
 }
 
-.flower-list__item {
+/* .flower - Block: HTML element koji predstavlja jednu samostalnu cjelinu */
+.flower {
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 3px solid green;
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+/* .flower__price - Element: Usko vezan za Block, tj. .flower */
+.flower__price {
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .text-center {
