@@ -61,18 +61,26 @@ h1::after {
   display: flex;
   justify-content: space-around;
   margin-bottom: 100px;
+  flex-wrap: wrap;
+  background-color: #cccccc;
+  padding: 50px 0;
 }
 
+/* BEM */
 /* .flower - Block: HTML element koji predstavlja jednu samostalnu cjelinu */
 .flower {
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid green;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  width: 200px;
+  min-width: 200px;
+  background-color: #ffffff; /* isto kao: white */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 /* .flower__price - Element: Usko vezan za Block, tj. .flower */
 .flower__price {
@@ -84,4 +92,35 @@ h1::after {
 
 .text-center {
   text-align: center;
+}
+
+/* Media queries (query) */
+/* Breakpoints:
+  - Mobile: 768px (max)
+  - Tablets: 992px (max)
+  - Desktop: 1200px (max)
+  */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  h2 {
+    margin-bottom: 8px;
+  }
+  /* .flower {
+    margin-bottom: 20px;
+  }
+  .flower:last-child {
+    margin-bottom: 0;
+  } */
+  .flower:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+/* Samo za veće ekrane */
+@media screen and (min-width: 768px) {
+  .flower:hover {
+    transform: translate(0, -8px);
+  }
 }
