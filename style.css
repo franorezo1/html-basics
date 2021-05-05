@@ -94,6 +94,10 @@ h1::after {
   text-align: center;
 }
 
+.selected {
+  background-color: lightblue;
+}
+
 /* Media queries (query) */
 /* Breakpoints:
   - Mobile: 768px (max)
