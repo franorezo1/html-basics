@@ -1,10 +1,8 @@
-function selectElement(id) {
-  var element = document.getElementById(id);
+import { selectElement } from "./js/module.js";
 
-  element.classList.toggle("selected");
-}
+console.log(selectElement);
 
-var list = document.getElementById("list");
+/* var list = document.getElementById("list");
 
 console.dir(list);
 
@@ -25,7 +23,7 @@ var obj = {
 
 console.log(element2);
 console.log(obj);
-
+ */
 /* Tipovi podataka: primitivni i objekti */
 
 /* Primitivni
