@@ -1,37 +1,19 @@
-import { selectElement } from "./js/module.js";
+let selected;
 
-console.log(selectElement);
+function selectElement(event) {
+  selected = event.target.id;
 
-/* var list = document.getElementById("list");
-
-console.dir(list);
-
-for (var i = 0; i < list.children.length; i++) {
-  var child = list.children[i];
-
-  // Prvi nacin :
-  //child.children[0].innerHTML = child.children[0].innerHTML + " " + i;
-
-  child.children[0].innerHTML = `${child.children[0].innerHTML} ${i}`;
+  console.dir(event);
+  console.log(selected);
 }
 
-var element2;
-var obj = {
-  bojaCvijeta: "Plava", //Object property
-  vrstaCvijeta: "Ljubicica"
-};
+const listElement = document.getElementById("list");
+const listItems = listElement.querySelectorAll("article");
 
-console.log(element2);
-console.log(obj);
- */
-/* Tipovi podataka: primitivni i objekti */
+for (let i = 0; i < listItems.length; i++) {
+  const titleElement = listItems[i].querySelector("h3");
 
-/* Primitivni
-number - brojevi
-string - tekst
-null 
-undefined - ukoliko nismo pridodjelili vrijednost
-boolean - true ili false
-symbol 
-bigInt
-*/
+  titleElement.innerHTML = `${titleElement.innerHTML} ${i}`;
+}
+
+listElement.addEventListener("click", event => (selected = event.target.id));

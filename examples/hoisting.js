@@ -1,7 +1,7 @@
 /* Variables */
 console.log(a);
-//console.log(b);
-//console.log(c);
+console.log(b);
+console.log(c);
 
 var a = "a";
 let b = "b";
