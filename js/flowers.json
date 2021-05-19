@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Lavanda",
+    "imageUrl": "./images/lavanda.jpeg",
+    "description": "Lorem ipsum dolor sit amet.",
+    "price": 20
+  },
+  {
+    "name": "Ruža",
+    "imageUrl": "./images/ruza.png",
+    "description": "Lorem ipsum dolor sit amet.",
+    "price": 20
+  },
+  {
+    "name": "Tulipan",
+    "imageUrl": "./images/tulipan.png",
+    "description": "Lorem ipsum dolor sit amet.",
+    "price": 20
+  },
+  {
+    "name": "Krizantema",
+    "imageUrl": "./images/krizantema.jpeg",
+    "description": "Lorem ipsum dolor sit amet.",
+    "price": 20
+  }
+]

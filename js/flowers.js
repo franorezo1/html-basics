@@ -1,31 +1,19 @@
-export const flowers = [
-  {
-    name: "Lavanda",
-    imageUrl: "./images/lavanda.jpeg",
-    description: "Lorem ipsum dolor sit amet.",
-    price: 20,
-  },
-  {
-    name: "Ruža",
-    imageUrl: "./images/ruza.png",
-    description: "Lorem ipsum dolor sit amet.",
-    price: 20,
-  },
-  {
-    name: "Tulipan",
-    imageUrl: "./images/tulipan.png",
-    description: "Lorem ipsum dolor sit amet.",
-    price: 20,
-  },
-  {
-    name: "Krizantema",
-    imageUrl: "./images/krizantema.jpeg",
-    description: "Lorem ipsum dolor sit amet.",
-    price: 20,
-  },
-];
+/**
+ * GET method that returns an array of flowers
+ * @returns Returns an array of flowers
+ */
+export async function getFlowers() {
+  // JSON - JavaScript Object Notation
+  return fetch("./js/flowers.json")
+    .then((response) => response.json())
+    .catch((error) => console.error("Error occured:", error));
+}
 
-// Kreira HTML element, ubaci u njega što treba i vrati ga
+/**
+ * Kreira HTML element, ubaci u njega što treba i vrati ga
+ * @param {Object} flower Flower object
+ * @returns HTML element
+ */
 export function getFlowerElement(flower) {
   const articleElement = document.createElement("article"); // <article></article>
   articleElement.classList.add("flower"); // <article class="flower"></article>
