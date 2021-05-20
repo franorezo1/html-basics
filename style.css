@@ -22,6 +22,10 @@ header {
   z-index: 1;
 }
 
+main {
+  position: relative;
+}
+
 h2 {
   display: inline-block;
   margin: 0;
@@ -127,4 +131,15 @@ h1::after {
   .flower:hover {
     transform: translate(0, -8px);
   }
+}
+
+/* Shop menu */
+#shop-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+  height: 100%;
+  border: 1px solid black;
+  width: 200px;
 }
