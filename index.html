@@ -37,8 +37,30 @@
       <!-- Kontakt -->
       <section>
         <!-- Ovdje dodati formu -->
-        <input type="text" />
-        <textarea name="poruka" id="message"></textarea>
+        <form id="contactForm">
+          <div>
+            <label for="subject">Naslov:</label>
+            <input type="text" name="subject" id="subject" required />
+          </div>
+
+          <div>
+            <label for="mail">Email:</label>
+            <input type="email" name="email" id="mail" required />
+          </div>
+
+          <div>
+            <label for="message">Poruka:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+
+          <button type="reset">Otkaži</button>
+          <button type="submit">Pošalji</button>
+        </form>
       </section>
 
       <!-- Aside -->
