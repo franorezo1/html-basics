@@ -14,7 +14,7 @@ export const flowerFactory = (flower) => {
  */
 export async function getFlowers() {
   // JSON - JavaScript Object Notation
-  return fetch("./js/flowers.json")
+  return fetch("http://localhost:61859/api/flowers") // Upisati ispravan URL na kojem se "vrti" backend
     .then((response) => response.json())
     .catch((error) => console.error("Error occured:", error));
 }
